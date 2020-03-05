@@ -13,3 +13,13 @@ Usage: ./random_forest.rb TRAINING_DATA.csv [options]
     -nNUM_TREES,                     Number of decision trees in the random forest
         --num-decision-trees
 ```
+
+## Example Usage
+
+```
+./random_forest.rb train.csv -m 1000 -v -n 5
+```
+Creates a random forest from `train.csv`
+- `-m` Read `1000` lines of input data.  
+- `-v` In verbose mode.
+- `-n` with 5 trees in the forest

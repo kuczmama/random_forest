@@ -5,7 +5,6 @@
 require 'set'
 require 'pry'
 
-
 # Make predictions with trees
 class DecisionTree
   attr_accessor :root
@@ -121,6 +120,10 @@ class DecisionTree
   end
 
   def match(value, question_value)
+    return !value.nil? if question_value.nil?
+    return !question_value.nil? if value.nil?
+
+    return false if value.class != question_value.class
     if !!question_value == question_value
       return value == question_value
     end # boolean
@@ -172,5 +175,3 @@ class DecisionTree
     end
   end
 end
-
-
